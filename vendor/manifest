@@ -1,0 +1,154 @@
+{
+	"version": 0,
+	"dependencies": [
+		{
+			"importpath": "github.com/cznic/cc",
+			"repository": "https://github.com/cznic/cc",
+			"vcs": "git",
+			"revision": "9604c5ca5ff2a70e0e4e82ee5a3653219e34954b",
+			"branch": "master",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/cznic/golex/lex",
+			"repository": "https://github.com/cznic/golex",
+			"vcs": "git",
+			"revision": "da5a7153a51074477ecac5c45a7e5182a0c72448",
+			"branch": "master",
+			"path": "/lex",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/cznic/mathutil",
+			"repository": "https://github.com/cznic/mathutil",
+			"vcs": "git",
+			"revision": "4609a45a9e61188d0d69a5d8ad42600c3df35002",
+			"branch": "master",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/cznic/sortutil",
+			"repository": "https://github.com/cznic/sortutil",
+			"vcs": "git",
+			"revision": "4c7342852e65c2088c981288f2c5610d10b9f7f4",
+			"branch": "master",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/cznic/strutil",
+			"repository": "https://github.com/cznic/strutil",
+			"vcs": "git",
+			"revision": "43a89592ed56c227c7fdb1fcaf7d1d08be02ec54",
+			"branch": "master",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/cznic/xc",
+			"repository": "https://github.com/cznic/xc",
+			"vcs": "git",
+			"revision": "056465bb2be50ec239d754187e1cccbe1b940aa6",
+			"branch": "master",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/gonum/blas",
+			"repository": "https://github.com/gonum/blas",
+			"vcs": "git",
+			"revision": "34a5cb24f900bb4f059b51aa300aed4da4437d0c",
+			"branch": "master",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/gonum/floats",
+			"repository": "https://github.com/gonum/floats",
+			"vcs": "git",
+			"revision": "a2cbc5c70616cd18491ef2843231f6ce28b2cb02",
+			"branch": "master",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/gonum/internal/asm/f32",
+			"repository": "https://github.com/gonum/internal",
+			"vcs": "git",
+			"revision": "aa14b654e75da6e47f3c563fbda889112fe5ac94",
+			"branch": "master",
+			"path": "asm/f32",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/gonum/internal/asm/f64",
+			"repository": "https://github.com/gonum/internal",
+			"vcs": "git",
+			"revision": "aa14b654e75da6e47f3c563fbda889112fe5ac94",
+			"branch": "master",
+			"path": "asm/f64",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/gonum/internal/binding",
+			"repository": "https://github.com/gonum/internal",
+			"vcs": "git",
+			"revision": "aa14b654e75da6e47f3c563fbda889112fe5ac94",
+			"branch": "master",
+			"path": "/binding",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/gonum/lapack",
+			"repository": "https://github.com/gonum/lapack",
+			"vcs": "git",
+			"revision": "f8f6677b2f355c5ec7f864be18860705f0e2d543",
+			"branch": "master",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/gonum/mathext",
+			"repository": "https://github.com/gonum/mathext",
+			"vcs": "git",
+			"revision": "5ed73512687a5a7fb052059dbcc72c78c440af0d",
+			"branch": "master",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/gonum/matrix",
+			"repository": "https://github.com/gonum/matrix",
+			"vcs": "git",
+			"revision": "68b3337288b97b85d1abfd58bf74b790d2ab4098",
+			"branch": "master",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/gonum/stat",
+			"repository": "https://github.com/gonum/stat",
+			"vcs": "git",
+			"revision": "d8d50582a98c45db7d1c7b063ac0b7e4f9fb1228",
+			"branch": "master",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/hashicorp/logutils",
+			"repository": "https://github.com/hashicorp/logutils",
+			"vcs": "git",
+			"revision": "0dc08b1671f34c4250ce212759ebd880f743d883",
+			"branch": "master",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/remyoudompheng/bigfft",
+			"repository": "https://github.com/remyoudompheng/bigfft",
+			"vcs": "git",
+			"revision": "a8e77ddfb93284b9d58881f597c820a2875af336",
+			"branch": "master",
+			"notests": true
+		},
+		{
+			"importpath": "golang.org/x/tools/container/intsets",
+			"repository": "https://go.googlesource.com/tools",
+			"vcs": "git",
+			"revision": "44492e23b4afd3e75591994228422613777ee4ee",
+			"branch": "master",
+			"path": "/container/intsets",
+			"notests": true
+		}
+	]
+}
