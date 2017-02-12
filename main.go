@@ -158,7 +158,7 @@ func main() {
 
 	surveyBytes, err := TxtToJSON(r)
 	if err != nil {
-		log.Println("[DEBUG] surveyToJSON error: ", err)
+		log.Fatalf("[INFO] Error converting txt to JSON: %s\n", err)
 	}
 	//log.Printf("[DEBUG] surveyBytes: %s\n", surveyBytes)
 
