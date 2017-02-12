@@ -136,7 +136,27 @@ func main() {
 	}
 	log.SetOutput(filter)
 
-	surveyBytes, err := TxtToJSON(os.Stdin)
+	// An io.Reader that we will read our survey data from (os.Stdin by
+	// default).
+	var r io.Reader
+	r = os.Stdin
+
+	// If file arguments are passed on the command line, use these files as
+	// source of survey data.
+	if flag.NArg() > 0 {
+		var files []io.Reader
+		for _, filename := range flag.Args() {
+			f, err := os.Open(filename)
+			if err != nil {
+				log.Fatalf("[INFO] Error opening file: %s\n", err)
+			}
+			files = append(files, f)
+		}
+
+		r = io.MultiReader(files...)
+	}
+
+	surveyBytes, err := TxtToJSON(r)
 	if err != nil {
 		log.Println("[DEBUG] surveyToJSON error: ", err)
 	}
