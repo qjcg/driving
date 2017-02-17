@@ -5,6 +5,7 @@ import (
 	"bufio"
 	"bytes"
 	"encoding/json"
+	"errors"
 	"flag"
 	"fmt"
 	"io"
@@ -150,6 +151,8 @@ func main() {
 			if err != nil {
 				log.Fatalf("[INFO] Error opening file: %s\n", err)
 			}
+			defer f.Close()
+
 			files = append(files, f)
 		}
 
@@ -160,9 +163,9 @@ func main() {
 	if err != nil {
 		log.Fatalf("[INFO] Error converting txt to JSON: %s\n", err)
 	}
-	//log.Printf("[DEBUG] surveyBytes: %s\n", surveyBytes)
+	log.Printf("[DEBUG] surveyBytes:\n%s\n", surveyBytes)
 
-	var surveys []Survey
+	var surveys []*Survey
 	dec := json.NewDecoder(bytes.NewReader(surveyBytes))
 	for dec.More() {
 		var s Survey
@@ -170,14 +173,14 @@ func main() {
 		if err != nil {
 			log.Printf("[DEBUG] Decode error: %s\n", err)
 		}
-		surveys = append(surveys, s)
+		surveys = append(surveys, &s)
 	}
 
 	fmt.Printf(NewReport(surveys).String())
 }
 
 // NewReport returns a new Report from a slice of Surveys.
-func NewReport(surveys []Survey) Report {
+func NewReport(surveys []*Survey) Report {
 	var curriculumAvgsSum,
 		instructorAvgsSum,
 		environmentAvgsSum,
@@ -239,6 +242,11 @@ func TxtToJSON(r io.Reader) ([]byte, error) {
 	scanner := bufio.NewScanner(r)
 	for scanner.Scan() {
 		line := scanner.Text()
+
+		// Validate input. Every .txt survey line should have an "=".
+		if !strings.Contains(line, "=") {
+			return buf.Bytes(), errors.New("invalid input")
+		}
 
 		// Survey delimiter. End last JSON object and begin a new one.
 		if line == "=" {
