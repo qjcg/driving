@@ -1,13 +1,18 @@
-Generate reports from RedHat Training survey files.
+# Driving
+
+Generate reports from cookie-jar format survey files.
+
+**NOTE: This is pre-alpha software. Several
+features are not yet fully implemented.**
 
 
 # Features
 
-- generate reports in several formats
+- generate reports as:
     - text
     - HTML
     - PNG
-- save reports and view history
+- save reports and view cumulative history
 
 
 # Usage
