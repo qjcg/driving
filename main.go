@@ -260,6 +260,7 @@ func TxtToJSON(r io.Reader) ([]byte, error) {
 		// dashes.
 		question := strings.Split(line, "=")
 		question[0] = strings.Replace(question[0], "-", "", -1)
+		question[1] = strings.Replace(question[1], "\"", "\\\"", -1)
 		line = fmt.Sprintf("  \"%s\": \"%s\",\n", question[0], question[1])
 
 		// survey_ver is (always?) the last field for each survey
